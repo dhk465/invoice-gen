@@ -28,11 +28,20 @@ Entities:
         ```
         returns sum of the prices of all items in the item list
         ```
-        - createItem(desc, price, quantity, vatRate, serviceStart, serviceEnd):
+        - createItem():
         ```
         makes a new Item entity and inserts it into the item list
         ```
-        vatRate, serviceStart and serviceEnd are optional parameters.
+        - updateItem(enumString, newValue):
+        ```
+        updates the item with newValue in a switch statement using enumeration
+        ```
+        enum enumString {description, price, quantity, vatRate, serviceStart, serviceEnd}
+        - deleteItem():
+        ```
+        deletes a selected item or selected items from the item list
+        ```
+        
 
 - Person (Supplier/Customer)
     - name
