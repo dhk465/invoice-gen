@@ -24,7 +24,11 @@ Entities:
     - customer
     - item list
     - exchange
-
+    - METHODS
+        - getTotal:
+        ```
+        returns sum of the prices of all items in the item list
+        ```
 
 - Person (Supplier/Customer)
     - name
@@ -38,9 +42,8 @@ Entities:
     - email address
     - bank
     - logo (image)
-    - METHODS
-        - calculateExchange
-        - getDate
+
+Polymorphism: Supplier and Customer are children of Person entity.
 
 - Bank
     - bank name
@@ -50,7 +53,10 @@ Entities:
     - SWIFT code
     - reference number
     - METHODS
-        - checkType: updates the forms to either international or domestic
+        - checkType:
+        ```
+        updates the forms to either international or domestic
+        ```
 
 - Item
     - description
@@ -59,16 +65,12 @@ Entities:
     - service end (dd.mm.yyyy)
     - single price
     - VAT rate
-    - VAT already included in price (yes or no)
     - METHODS
         - checkIncluded:
-            ```
-            if (VAT already included in price) is true:
-                returns (single price) * (quantity)
-            else
-                returns ((single price) + (rate * single price)) * (quantity)
-            ```
-        - getDate
+        ```
+        returns (single price + (rate * single price)) * quantity
+        ```
+        If rate is 0, it indicates the user either already applied the rate in the single price or VAT is excluded.
 
 - Exchange
     - initial amount
@@ -78,8 +80,10 @@ Entities:
     - date exchanged
     - exchange institute
     - METHODS
-        - calculateExchange
-        - getDate
+        - calculateExchange: 
+        ```
+        returns rate * initial amount
+        ```
 
 - other forms in strings / non-class variables
     - issuer
@@ -87,3 +91,5 @@ Entities:
     - date received
 
 Once the inputs are all given, the application processes some calculations for the item prices, VAT information and the exchange amount. Then it produces a pdf file from the strings. The application requests the user to save the pdf file on the device.
+
+Each form has their own constraints for acceptable characters (using regex).
