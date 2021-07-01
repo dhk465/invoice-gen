@@ -6,7 +6,7 @@ It contains an invoice with a specific format. The format of the invoice follows
 
 해당 어플리케이션은 GUI 폼 요소를 통해 유저 입력값으로 PDF 파일을 만듭니다. 이 PDF 파일은 특정한 인보이스 형식을 따릅니다. 인보이스 형식은 체코 공화국의 사업적 기준에 맞추어져 있습니다.
 
-## Design
+## Data/Class Structure Design
 
 The application takes several user inputs in form of strings.
 The inputs are stored in entities/objects.
