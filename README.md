@@ -30,7 +30,7 @@ Entities:
         ```
         - createItem(desc, price, quantity, vatRate, serviceStart, serviceEnd):
         ```
-        makes a new Item entity and insert it into the item list
+        makes a new Item entity and inserts it into the item list
         ```
         vatRate, serviceStart and serviceEnd are optional parameters.
 
