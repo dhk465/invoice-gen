@@ -1,5 +1,4 @@
-# Documentation for Invoice-Gen • 인보이스-젠 문서 매뉴얼
-
+# Documentation for Invoice-Gen • 인보이스-젠 디자인
 ## Brief Introduction
 
 This C++ desktop application takes user inputs via GUI forms and creates a pdf file.
