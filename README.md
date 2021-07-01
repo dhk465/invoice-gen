@@ -24,10 +24,15 @@ Entities:
     - item list
     - exchange
     - METHODS
-        - getTotal:
+        - getTotal():
         ```
         returns sum of the prices of all items in the item list
         ```
+        - createItem(desc, price, quantity, vatRate, serviceStart, serviceEnd):
+        ```
+        makes a new Item entity and insert it into the item list
+        ```
+        vatRate, serviceStart and serviceEnd are optional parameters.
 
 - Person (Supplier/Customer)
     - name
@@ -52,20 +57,20 @@ Polymorphism: Supplier and Customer are children of Person entity.
     - SWIFT code
     - reference number
     - METHODS
-        - checkType:
+        - updateType():
         ```
         updates the forms to either international or domestic
         ```
 
 - Item
     - description
-    - quantity
     - service start (dd.mm.yyyy)
     - service end (dd.mm.yyyy)
+    - quantity
     - single price
     - VAT rate
     - METHODS
-        - checkIncluded:
+        - getNetPrice():
         ```
         returns (single price + (rate * single price)) * quantity
         ```
@@ -79,7 +84,7 @@ Polymorphism: Supplier and Customer are children of Person entity.
     - date exchanged
     - exchange institute
     - METHODS
-        - calculateExchange: 
+        - calculateExchange(): 
         ```
         returns rate * initial amount
         ```
